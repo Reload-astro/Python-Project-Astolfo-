@@ -136,13 +136,15 @@ for i in range(len(stripped)):
                 {white}╚════════════════════{main_clr}════════════════════╝
                 """))
             if string == "tcp-ping":
-                print(f"{main_clr}                    Press 'q' to stop pinging")
+                print(f"{main_clr}                      Hold 'q' to stop pinging")
                 print(faded(text2art(f"     TCP Ping","cybermedium")))
             if string == "ping":
-                print(f"{main_clr}                    Press 'q' to stop pinging")
+                print(f"{main_clr}                      Hold 'q' to stop pinging")
                 print(faded(text2art(f"        Ping","cybermedium")))
             if string == "lookup":
                 print(faded(text2art(f"        IP lookup","cybermedium")))
+            if string == "spass":
+                print(faded(text2art(f"        Password","cybermedium")))
 
         while True:
             os.system('cls')
@@ -181,18 +183,21 @@ for i in range(len(stripped)):
                     banner("ping")
                     for _ in range(13):
                         ping(ip,)
+
             if cmd == "spass":
                 os.system('cls')
                 os.system('mode 80,20')
                 os.system(f'title {tool_name} Multi Tool')
-                banner("ping")
+                banner("spass")
                 website = input(f"{main_clr}[{white}website{main_clr}]{white}~{main_clr}$ ")
                 password = input(f"{main_clr}[{white}password{main_clr}]{white}~{main_clr}$ ")
-                with open(f"{path}\\txt\password.txt", "w") as f:
-                    f.write("---------------\n")
-                    f.write(f"{website}\n")
-                    f.write(f"{password}\n")
-                    f.write("---------------\n")
+                if website != "" or password != "":
+                    with open(f"{path}\\txt\password.txt", "a") as f:
+                        f.write("---------------\n")
+                        f.write(f"{website}\n")
+                        f.write(f"{password}\n")
+                        f.write("---------------\n")
+                
             if cmd == "lookup":
                 os.system('cls')
                 os.system('mode 80,20')
