@@ -215,7 +215,7 @@ for i in range(len(stripped)):
                 print(f"{white}Network Name:{main_clr}", result['network']['name'])
                 print(f"{white}Network CIDR:{main_clr}", result['network']['cidr'])
                 print(f"{white}Network Country Code:{main_clr}", result['network']['country'])
-                cmd = input(f"{main_clr}[{white}PRESS ENTER{main_clr}]{white}...")  
+                input("press enter...")  
 else:
     os.system("cls")
     mixer.init()
@@ -223,4 +223,4 @@ else:
     mixer.music.play()
     print(f"{white}please send this to {main_clr}! Reload#0001{white} on discord!{main_clr}")
     print(hashlib.sha256((os.name + getpass.getuser() + gma.get_mac_address() + str(hex(uuid.getnode()))).encode()).hexdigest())
-    input(f"{main_clr}[{white}PRESS ENTER AFTER COPPIED{main_clr}]{white}...")
+    input("press enter...")
