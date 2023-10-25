@@ -1,12 +1,6 @@
-socket
-json
-time
 keyboard
 requests
 art
-getpass
-uuid
-hashlib
-getmac
-ipwhois
 pygame
+ipwhois
+getmac
